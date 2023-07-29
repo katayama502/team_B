@@ -17,65 +17,65 @@
 
             // Switch文でじゃんけんの出力を作成
             switch(janken_p){
-                case 1: $janken_p = "パー";
+                case 1: $janken_p = "チョキ";
                 break;
-                case 2: $janken_p = "グー";
+                case 2: $janken_p = "パー";
                 break;
-                case 3: $janken_p = "チョキ";
+                case 3: $janken_p = "グー";
                 break;
             }
             // ドキュメントで指定のIDに対して出力する内容をセットする処理作成⭐️
-            document.getElementById("").innerHTML = $janken_p;
-            document.getElementById("").src= "" + janken_p + "";
+            document.getElementById("janken_p").innerHTML = $janken_p;
+            document.getElementById("Player").src= "img/janken/janken_" + janken_p + ".jpg";
 
             // JavaScriptでの乱数の発生と端数切り捨ての処理
             let janken_a = Math.floor( Math.random() * 3) +1;
 
             // Switch文でじゃんけんの出力を作成
             switch(janken_a){
-                case 1: $janken_a = "パー";
+                case 1: $janken_a = "チョキ";
                 break;
-                case 2: $janken_a = "グー";
+                case 2: $janken_a = "パー";
                 break;
-                case 3: $janken_a = "チョキ";
+                case 3: $janken_a = "グー";
                 break;
             }
             // ドキュメントで指定のIDに対して出力する内容をセットする処理作成⭐️
-            document.getElementById("").innerHTML = $janken_a;
-            document.getElementById("").src= "" + janken_a + "";
+            document.getElementById("janken_a").innerHTML = $janken_a;
+            document.getElementById("ai").src= "img/janken/janken_" + janken_a + ".jpg";//★jpg(要復習！！)を選択できる
             
             // じゃんけんに必須な勝ち負けの判定処理を作成⭐️
             switch(janken_p){
                 case 1:switch(janken_a){
-                        case 1: $kekka = "";
+                        case 1: $kekka = "あいこ";
                         break;
-                        case 2: $kekka = "";
+                        case 2: $kekka = "勝ち";
                         break;
-                        case 3: $kekka = "";
+                        case 3: $kekka = "負け";
                         break;
                         }
                 break;
                 case 2:switch(janken_a){
-                        case 1: $kekka = "";
+                        case 1: $kekka = "負け";
                         break;
-                        case 2: $kekka = "";
+                        case 2: $kekka = "あいこ";
                         break;
-                        case 3: $kekka = "";
+                        case 3: $kekka = "勝ち";
                         break;
                         }
                 break;
                 case 3:switch(janken_a){
-                        case 1: $kekka = "";
+                        case 1: $kekka = "勝ち";
                         break;
-                        case 2: $kekka = "";
+                        case 2: $kekka = "負け";
                         break;
-                        case 3: $kekka = "";
+                        case 3: $kekka = "あいこ";
                         break;
                         }
                 break;
             }
             // ドキュメントで指定のIDに対して出力する内容をセットする処理作成⭐️
-            document.getElementById("").innerHTML = $kekka;
+            document.getElementById("play").innerHTML = $kekka;
         }
     </script>
 
